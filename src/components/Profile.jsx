@@ -26,7 +26,7 @@ const Profile = () => {
             <div className='flex flex-col justify-center items-center text-xl white-glassmorphism w-[50%] p-4 m-4'>
                 <div className='flex flex-row justify-between w-[80%] items-center m-2 '>
                       <div className='w-[40%] blue-glassmorphism p-2 mr-3 text-center border-[0.5px] border-neutral-300'>Name </div>
-                      <div className='w-full'>Anonymous</div>
+                      <div className='w-full'>Mohanraj M</div>
                 </div>
                 <div className='flex flex-row justify-between w-[80%] items-center m-2'>
                       <div className='w-[40%] blue-glassmorphism p-2 mr-3 text-center border-[0.5px] border-neutral-300'>Address </div>

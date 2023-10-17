@@ -10,3 +10,5 @@ export { default as View} from './View';
 export { default as Tutorial} from './Tutorial';
 export { default as Profile} from './Profile';
 export {default as Nopage} from './Nopage';
+export {default as Create} from './Create';
+export { default as Verify} from './Verify';

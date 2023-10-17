@@ -93,7 +93,6 @@ const Upload = () => {
     <div className=' min-h-screen gradient-bg-common'>
       <Navbar />
 
-
         <div className='text-white'>
         <div class="w-full p-10  rounded-xl z-10">
 

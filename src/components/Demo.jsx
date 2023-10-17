@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { NFTStorage, File, Blob } from "nft.storage"
 
 import { Worker } from '@react-pdf-viewer/core';
 import { Viewer } from '@react-pdf-viewer/core';
@@ -8,8 +9,35 @@ import { Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 
 const Demo = () => {
+
+    const docs = [
+        { 
+            uri: "https://ipfs.io/ipfs/bafybeifbtoiykba3lgbgt6szlxhl6i4uy4chwxx5zev6du5mnd24ao7yha",
+            fileType : "pdf"
+        }
+      ];
+
+    const [urlArr, setUrlArr] = useState('https://ipfs.moralis.io:2053/ipfs/QmPc5KBDmBbHD8ez2ThEsU9Q9WW8gYvjGT63Nt6NyN5UdN/resume');
+    const [file,setFile] = useState('');
+    var fileData;
+
+    const client = new NFTStorage({ token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGEyMEViRTUyNTcxMjZFNTExNzU0NmEyMTNkMTEzYUVlQmYwRjEzODMiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY5NTM2NTg4NTM3MywibmFtZSI6ImNoYWlucHJvb2YifQ.Caz4DNdN7cofN6pabo4fXbMM_h_Kwbx84y_liqc3lhc' });
+
+
+    const handleChange = async (e) =>{
+        const data = e.target.files[0];
+        const cid = await client.storeBlob(new Blob([data]));
+        console.log("cid",cid);
+        setUrlArr(`https://ipfs.io/ipfs/${cid}`);
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+    }
+
   return (
-            <div  className={"flex flex-col justify-center items-center gradient-bg-welcome "}>
+            <div  className={"flex flex-col justify-center items-center gradient-bg-welcome"}>
                 {/* <PDFViewer
                     document={{
                         url: 'https://ipfs.moralis.io:2053/ipfs/QmPc5KBDmBbHD8ez2ThEsU9Q9WW8gYvjGT63Nt6NyN5UdN/resume',
@@ -25,11 +53,13 @@ const Demo = () => {
                 fileType={"png"}
                 filePath={'https://ipfs.moralis.io:2053/ipfs/QmRAb7w2PAKjSzYdwW7xTLvdTqxQ277BP1QYsYCraU1ULL/bmc.png'}
                 ></FileViewer> */}
+
                 <div className={" border-[2px] shadow-lg h-[500px] w-[60%]"}>
 
-                <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-                          <Viewer fileUrl="https://ipfs.moralis.io:2053/ipfs/QmPc5KBDmBbHD8ez2ThEsU9Q9WW8gYvjGT63Nt6NyN5UdN/resume" />
-                </Worker>
+                    <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+                            <Viewer fileUrl={urlArr} />
+                    </Worker>
+
                 </div>
                 <div class="flex justify-center mt-8">
                     <div class="max-w-2xl rounded-lg shadow-xl white-glassmorphism">
@@ -47,15 +77,16 @@ const Demo = () => {
                                         <p class="pt-1 text-sm tracking-wider text-black group-hover:text-gray-600">
                                             Attach a file</p>
                                     </div>
-                                    <input type="file" class="opacity-0" />
+                                    <input type="file" class="opacity-0" onChange={handleChange} />
                                 </label>
                             </div>
                         </div>
                         <div class="flex justify-center p-2">
-                            <button class="w-full px-4 py-2 text-white bg-blue-500 rounded shadow-xl">Upload</button>
+                            <button class="w-full px-4 py-2 text-white bg-blue-500 rounded shadow-xl" onClick={handleSubmit}>Upload</button>
                         </div>
                     </div>
                 </div> 
+
           
             </div>
   )

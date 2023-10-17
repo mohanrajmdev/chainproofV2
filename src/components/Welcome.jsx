@@ -61,13 +61,13 @@ const Welcome = () => {
     setEthName(network.name);
     console.log(network)
     setEthSymbol(network.symbol);
-    
   };
   
   const connectWallet = async() => {
     try {
       const {ethereum} = window;
       if(ethereum) {
+        console.log(ethereum);
         window.ethereum
         .request({ method: "eth_requestAccounts" })
         .then((res) => accountChangeHandler(res[0]));
@@ -84,7 +84,7 @@ const Welcome = () => {
 
   return (
     <div className="flex w-full justify-center items-center">
-      <div className="flex md:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
+      <div className="flex md:flex-row flex-col items-start justify-between md:p-14 py-10 px-3">
         <div className="flex flex-1 justify-start items-start flex-col mf:mr-100"> 
           <h1 className="text-5xl sm:text-8xl text-white text-gradient py-8">
             Validate Documents <br /> across the world
@@ -137,8 +137,8 @@ const Welcome = () => {
 
         
 
-        <div className="flex flex-col flex-1 items-center justify-start w-full h-full mf:mt-20 mt-10">
-  <div className="p-4 flex justify-end items-start flex-col rounded-3xl h-[16rem] sm:w-96 w-full my-7 eth-card white-glassmorphism">
+        <div className="flex flex-col flex-1 items-center justify-start w-full h-full mf:mt-14 mt-8">
+  <div className="p-4 flex justify-end items-start flex-col rounded-3xl h-[16rem] sm:w-96 w-full my-5 eth-card white-glassmorphism">
     <div className="flex justify-between flex-col w-full h-full">
       <div className="flex justify-between items-start">
         <div className="w-16 h-16 rounded-full border-4 border-white flex justify-center items-center">
