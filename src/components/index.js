@@ -12,3 +12,5 @@ export { default as Profile} from './Profile';
 export {default as Nopage} from './Nopage';
 export {default as Create} from './Create';
 export { default as Verify} from './Verify';
+export {default as Login} from './Login';
+export { default as Signup} from './Signup';

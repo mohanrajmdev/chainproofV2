@@ -61,7 +61,9 @@ const Create = () => {
                         
                         <div className='flex flex-row w-full mb-4 tracking-wide'>
                             <div className='flex flex-col justify-center items-center w-[50%]'>
-                                <div className=' text-lg m-1 text-center'>Signature</div>
+                            <div className=' text-lg m-1 text-center'>
+                                  <img src={signature} alt="signature" width={"150"} height={"150"} />
+                                </div>
                                 <div className=' text-lg font-bold text-center'>{hodName}</div>
                             </div>
 
@@ -85,20 +87,33 @@ const Create = () => {
             {/* Input fields of the certificate */}
             <div className='md:w-[30%] w-[90%] white-glassmorphism m-2'>
                             <div className='flex flex-col p-2'>
-                                  <label class="text-sm font-bold text-white tracking-wide">Name</label>
-                                  <input class="text-base text-black p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 w-[90%]" type="text" placeholder="Enter the your Name" value={name} onChange={(e) => setName(e.target.value)} />
+                                  <label class="text-sm font-bold text-white tracking-wide m-1">Name</label>
+                                  <input class="text-base text-black p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 w-[90%] m-1" type="text" placeholder="Enter the your Name" value={name} onChange={(e) => setName(e.target.value)} />
                             </div>
+
                             <div className='flex flex-col p-2'>
-                                  <label class="text-sm font-bold text-white tracking-wide">Course Name</label>
-                                  <input class="text-base text-black p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 w-[90%]" type="text" placeholder="Enter the your Course Name" value={courseName} onChange={(e) => setCourseName(e.target.value)} />
+                                  <label class="text-sm font-bold text-white tracking-wide m-1">Course Name</label>
+                                  <input class="text-base text-black p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 w-[90%] m-1" type="text" placeholder="Enter the your Course Name" value={courseName} onChange={(e) => setCourseName(e.target.value)} />
                             </div>
+
                             <div className='flex flex-col p-2'>
-                                  <label class="text-sm font-bold text-white tracking-wide">Department of CSE</label>
-                                  <input class="text-base text-black p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 w-[90%]" type="text" placeholder="Enter the Roll No" value={hodName} onChange={(e) => setHodName(e.target.value)} />
+                                  <label class="text-sm font-bold text-white tracking-wide m-1">Department Head</label>
+                                  <input class="text-base text-black p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 w-[90%] m-1" type="text" placeholder="Enter the Roll No" value={hodName} onChange={(e) => setHodName(e.target.value)} />
                             </div>
+
                             <div className='flex flex-col p-2'>
-                                  <label class="text-sm font-bold text-white tracking-wide">College Name</label>
-                                  <input class="text-base text-black p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 w-[90%]" type="text" placeholder="Enter the Department (Eg:CSE)" value={collgName} onChange={(e) => setCollgName(e.target.value)} />
+                                  <label className="text-sm font-bold text-white tracking-wide m-1">Signature Of head</label>
+                                  <input className="text-base text-black bg-white p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 w-[90%] m-1" type="file"  />
+                            </div>
+
+                            <div className='flex flex-col p-2'>
+                                  <label className="text-sm font-bold text-white tracking-wide m-1">College Name</label>
+                                  <input className="text-base text-black p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 w-[90%] m-1" type="text" placeholder="Enter the Department (Eg:CSE)" value={collgName} onChange={(e) => setCollgName(e.target.value)} />
+                            </div>
+
+                            <div className='flex flex-col p-2'>
+                                  <label className="text-sm font-bold text-white tracking-wide m-1">Signature Of College</label>
+                                  <input className="text-base text-black bg-white p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 w-[90%] m-1" type="file"  />
                             </div>
 
                             <div className='flex flex-row'>
@@ -134,4 +149,4 @@ const Create = () => {
   )
 }
 
-export default Create
+export default Create;

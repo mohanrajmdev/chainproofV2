@@ -19,7 +19,6 @@ contract Verify{
 
     mapping(address => Record[]) recordlist;
     mapping(string => Depart[]) department;
-
     
      function addDoc (string calldata _name,string calldata _desc,string calldata _ipfs,string calldata _rollno,string calldata _depart) public  
       {
@@ -38,8 +37,5 @@ contract Verify{
       function getDoc() public view returns(Record[] memory){
           return recordlist[msg.sender];
       }
-
-      
-    
 
 }

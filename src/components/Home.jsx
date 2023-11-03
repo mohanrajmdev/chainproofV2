@@ -7,7 +7,7 @@ const Home = () => {
         <div className='gradient-bg-welcome'>
           <Navbar />
           <Welcome />
-      </div>
+        </div>
       <Services />
       <Team />
       <Footer />
@@ -15,4 +15,4 @@ const Home = () => {
   )
 } 
 
-export default Home
+export default Home;

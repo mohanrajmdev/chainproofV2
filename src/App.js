@@ -1,6 +1,6 @@
 import './App.css';
 import {BrowserRouter , Routes , Route} from "react-router-dom";
-import {Home , Upload , View , Tutorial , Profile ,Nopage , Create ,Verify} from './components'
+import {Home , Upload , View , Tutorial , Profile ,Nopage , Create ,Verify, Login, Signup} from './components'
 import Demo from './components/Demo';
 import  { Toaster } from 'react-hot-toast';
 
@@ -17,6 +17,8 @@ function App() {
           <Route path="/tutorial" element={<Tutorial />} />
           <Route path="/profile" element={<Profile />} />
           <Route path='/create' element={<Create />} />
+          <Route path="/login" element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
           <Route path="/test" element={<Demo />} />
           <Route path="*" element={<Nopage />} />
         </Routes>

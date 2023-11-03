@@ -11,6 +11,7 @@ import bhuvaneshwari from '../assets/images/bhuvaneshwari.jpg'
 
 
 const DeveloperCard = ({ name, role, avatar ,linkedin,github,instagram , portfolio}) => (
+
     // <div className="flex flex-col p-6 m-3 w-[225px] border rounded-lg shadow-xl white-glassmorphism">
     //   <img src={avatar} alt={`${name}'s Avatar`} className="w-40 h-40 rounded-full mr-4" />
     //   <div className="flex flex-col justify-center">
@@ -19,10 +20,10 @@ const DeveloperCard = ({ name, role, avatar ,linkedin,github,instagram , portfol
     //         <h3 className="text-2xl font-semibold text-white text-gradient-lighter">{name}</h3>s
     //         <p className="text-gray-500">{role}</p>
     //       </div>
-    //     </div>
-        
+    //     </div> 
     //   </div>
     // </div>
+
     <div className="text-center text-gray-500 dark:text-gray-400  block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
     <img className="mx-auto mb-4 w-36 h-36 rounded-full" src={avatar} alt="Bonnie Avatar" />
     <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -57,7 +58,7 @@ const DeveloperCard = ({ name, role, avatar ,linkedin,github,instagram , portfol
 const Team = () => {
   const developers = [
     {
-      name: 'Mohamed waseem A',
+      name: 'Mohamed Waseem A',
       role: 'Research & Development',
       avatar: waseem,
       github: "https://github.com/waseem0605",
@@ -65,15 +66,15 @@ const Team = () => {
       instagram: 'https://www.instagram.com/waseem_0605/ ',
       portfolio : 'https://waseem0605.netlify.app'
     },
-    {
-      name: 'Kavin Kumar S',
-      role: 'Smart Contract Developer',
-      avatar: kavin,
-      github: 'https://github.com/ikavinkumar',
-      linkedin:'',
-      instagram: ' ',
-      portfolio : ''
-    },
+    // {
+    //   name: 'Kavin Kumar S',
+    //   role: 'Smart Contract Developer',
+    //   avatar: kavin,
+    //   github: 'https://github.com/ikavinkumar',
+    //   linkedin:'',
+    //   instagram: ' ',
+    //   portfolio : ''
+    // },
     {
       name: 'Mohanraj M',
       role: 'Blockchain Developer',
@@ -83,27 +84,27 @@ const Team = () => {
       instagram: 'https://www.instagram.com/moh.an.raj/',
       portfolio : 'https://mohanrajmdev.github.io/portfolio-website/'
     },
+    // {
+    //   name: 'Fatheem ',
+    //   role: 'Smart Contract Developer',
+    //   avatar: fatheem,
+    //   github: 'https://github.com/Fatheenibrahim',
+    //   linkedin:'https://www.linkedin.com/in/fatheen-ibrahim-565274240/',
+    //   instagram: 'https://www.instagram.com/fatheen_ibrahim/',
+    //   portfolio : ''
+    // },
+    // {
+    //   name: 'Bhuvaneshwari',
+    //   role: 'Smart Contract Developer',
+    //   avatar: bhuvaneshwari,
+    //   github: 'https://github.com/Bhuvneshwarivijaykumar',
+    //   linkedin:'https://www.linkedin.com/in/bhuvaneshwari-v-31557b27a/',
+    //   instagram: 'https://www.instagram.com/bhuvi.vijayakumar/',
+    //   portfolio : ''
+    // },
     {
-      name: 'Fatheem ',
-      role: 'Smart Contract Developer',
-      avatar: fatheem,
-      github: 'https://github.com/Fatheenibrahim',
-      linkedin:'https://www.linkedin.com/in/fatheen-ibrahim-565274240/',
-      instagram: 'https://www.instagram.com/fatheen_ibrahim/',
-      portfolio : ''
-    },
-    {
-      name: 'Bhuvaneshwari',
-      role: 'Smart Contract Developer',
-      avatar: bhuvaneshwari,
-      github: 'https://github.com/Bhuvneshwarivijaykumar',
-      linkedin:'https://www.linkedin.com/in/bhuvaneshwari-v-31557b27a/',
-      instagram: 'https://www.instagram.com/bhuvi.vijayakumar/',
-      portfolio : ''
-    },
-    {
-      name: 'Janani',
-      role: 'Smart Contract Developer',
+      name: 'Janani M',
+      role: 'UI/UX DESIGNER',
       avatar: janani,
       github: 'https://github.com/Janani-m17',
       linkedin:'https://www.linkedin.com/in/janani-manikandan-7a01b624a',

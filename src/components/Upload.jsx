@@ -42,6 +42,7 @@ const Upload = () => {
              await window.ethereum.request({ method: "eth_requestAccounts" });
               const provider = new ethers.providers.Web3Provider(window.ethereum);
               const signer = provider.getSigner();
+              
               const contract = new ethers.Contract(smartcontract['contract-address'], smartcontract.abi, signer);
 
               const ipfs = 'https://ipfs.moralis.io:2053/ipfs/QmPc5KBDmBbHD8ez2ThEsU9Q9WW8gYvjGT63Nt6NyN5UdN/resume';
@@ -54,15 +55,14 @@ const Upload = () => {
                 setRollno("");
                 setMessage("");
                 setFile("");
-                toast.success('Document Uploaded Successfully',
-              {
-                style: {
-                  borderRadius: '10px',
-                  background: '#333',
-                  color: '#fff',
-                },
-              }
-        );
+                const signature = await signer.signMessage("Account Created Successfully");
+                toast.success('Document Uploaded Successfully',{
+                                                                  style: {
+                                                                    borderRadius: '10px',
+                                                                    background: '#333',
+                                                                    color: '#fff',
+                                                                  },
+                                                                });
               } catch (error) {
                 toast.warn('Please install Metamask',
               {
